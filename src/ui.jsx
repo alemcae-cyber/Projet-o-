@@ -83,7 +83,6 @@ function useLargura() {
   return [ref, w];
 }
 
-// series: [{ nome, cor, texto, valores, escala }]  (escala 10 leva notas 0–10 para 0–100)
 export function LineChart({ labels, series, desc }) {
   const [ref, W] = useLargura();
   const H = 170, P = { l: 34, r: 14, t: 12, b: 26 };
@@ -125,3 +124,15 @@ export function LineChart({ labels, series, desc }) {
     </figure>
   );
 }
+
+const ICONES = {
+  painel: <path d="M4 20V10M10 20V4M16 20v-7M22 20H2" />,
+  aluno: <><circle cx="12" cy="8" r="4" /><path d="M4 21c0-4 3.6-6 8-6s8 2 8 6" /></>,
+  familia: <><circle cx="9" cy="8" r="3.5" /><path d="M2.5 20c0-3.6 2.9-5.5 6.5-5.5s6.5 1.9 6.5 5.5" /><circle cx="17.5" cy="9" r="2.5" /><path d="M17.5 14.5c2.5 0 4 1.5 4 4.5" /></>,
+  avisos: <><path d="M6 17v-6a6 6 0 1 1 12 0v6l2 2H4z" /><path d="M10 21a2 2 0 0 0 4 0" /></>,
+};
+export const Icone = ({ nome }) => (
+  <svg className="icone" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+    {ICONES[nome]}
+  </svg>
+);

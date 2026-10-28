@@ -5,8 +5,8 @@ const Ctx = createContext(null);
 const ler = (k, d) => { try { return JSON.parse(localStorage.getItem(k)) ?? d; } catch { return d; } };
 const gravar = (k, v) => { try { localStorage.setItem(k, JSON.stringify(v)); } catch { /* sem storage */ } };
 
-// ATENÇÃO: protótipo. Guardar senha no navegador NÃO é seguro.
-// Com back-end, o login e o cadastro passam a chamar a API (e a senha nunca fica no front).
+// Login simples para desenvolvimento: a senha fica no navegador.
+// Com back-end, login e cadastro chamam a API.
 export function AuthProvider({ children }) {
   const [extras, setExtras] = useState(() => ler('edutrack.users', []));
   const [email, setEmail] = useState(() => ler('edutrack.session', null));

@@ -25,6 +25,5 @@ export function cpfValido(v) {
 
 export const emailValido = (v) => /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/.test(v.trim());
 
-// "Pedro Lima" -> "P**** L***" (não mostra o nome inteiro antes de a conta existir)
 export const mascararNome = (n) =>
   n.split(' ').map((p) => p[0] + '*'.repeat(Math.max(2, p.length - 1))).join(' ');

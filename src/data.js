@@ -1,4 +1,4 @@
-// Dados fictícios. Quando houver back-end, troque estas listas por chamadas à API.
+// Dados de teste. Com back-end, estas listas vêm da API.
 export const BIM = ['1º bim', '2º bim', '3º bim', '4º bim'];
 export const DISCIPLINAS = ['Português', 'Matemática', 'Ciências', 'História'];
 
@@ -38,23 +38,23 @@ export const ALUNOS = [
 ];
 
 export const PERFIS = {
-  secretaria: { titulo: 'Secretaria de Educação (todas as escolas)', curto: 'Secretaria', exemplo: 'secretaria@edutrack.pe', home: '/painel' },
-  coordenacao: { titulo: 'Coordenação escolar', curto: 'Coordenação', exemplo: 'coordenacao@escola.pe', home: '/painel' },
-  professor: { titulo: 'Professor', curto: 'Professor', exemplo: 'professor@escola.pe', home: '/alunos' },
-  responsavel: { titulo: 'Responsável (pai de Pedro)', curto: 'Responsável', exemplo: 'responsavel@email.com', home: '/desempenho' },
-  aluno: { titulo: 'Aluno (Ana Souza)', curto: 'Aluno', exemplo: 'ana@escola.pe', home: '/desempenho' },
+  secretaria: { titulo: 'Secretaria de Educação', desc: 'Acompanhe todas as escolas da rede', curto: 'Secretaria', home: '/painel' },
+  coordenacao: { titulo: 'Coordenação escolar', desc: 'Acompanhe os alunos e as turmas da escola', curto: 'Coordenação', home: '/painel' },
+  professor: { titulo: 'Professor', desc: 'Veja suas turmas e envie comunicados', curto: 'Professor', home: '/alunos' },
+  responsavel: { titulo: 'Responsável', desc: 'Acompanhe o desempenho do seu filho', curto: 'Responsável', home: '/desempenho' },
+  aluno: { titulo: 'Aluno', desc: 'Veja suas notas e sua frequência', curto: 'Aluno', home: '/desempenho' },
 };
 
 // [rota, ícone, texto do menu, texto curto do menu do celular]
 export const NAV = {
-  aluno: [['/desempenho', '🎓', 'Meu desempenho', 'Início'], ['/comunicados', '📢', 'Comunicados', 'Avisos']],
-  responsavel: [['/desempenho', '👪', 'Meu filho', 'Meu filho'], ['/comunicados', '📢', 'Comunicados', 'Avisos']],
-  professor: [['/alunos', '🎓', 'Turmas e alunos', 'Turmas'], ['/comunicados', '📢', 'Comunicados', 'Avisos']],
-  coordenacao: [['/painel', '📊', 'Painel', 'Painel'], ['/alunos', '🎓', 'Alunos', 'Alunos'], ['/comunicados', '📢', 'Comunicados', 'Avisos']],
-  secretaria: [['/painel', '📊', 'Painel', 'Painel'], ['/comunicados', '📢', 'Comunicados', 'Avisos']],
+  aluno: [['/desempenho', 'aluno', 'Meu desempenho', 'Início'], ['/comunicados', 'avisos', 'Comunicados', 'Avisos']],
+  responsavel: [['/desempenho', 'familia', 'Meu filho', 'Meu filho'], ['/comunicados', 'avisos', 'Comunicados', 'Avisos']],
+  professor: [['/alunos', 'aluno', 'Turmas e alunos', 'Turmas'], ['/comunicados', 'avisos', 'Comunicados', 'Avisos']],
+  coordenacao: [['/painel', 'painel', 'Painel', 'Painel'], ['/alunos', 'aluno', 'Alunos', 'Alunos'], ['/comunicados', 'avisos', 'Comunicados', 'Avisos']],
+  secretaria: [['/painel', 'painel', 'Painel', 'Painel'], ['/comunicados', 'avisos', 'Comunicados', 'Avisos']],
 };
 
-// Senha de todos os usuários de exemplo: 123456
+// Contas de teste (senha: 123456)
 export const USUARIOS_SEED = [
   { email: 'secretaria@edutrack.pe', senha: '123456', perfil: 'secretaria', nome: 'Secretaria de Educação' },
   { email: 'coordenacao@escola.pe', senha: '123456', perfil: 'coordenacao', nome: 'Coordenação', escolaId: 'e1' },

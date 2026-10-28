@@ -22,12 +22,12 @@ export default function Entrar() {
       {!perfil ? (
         <>
           <h1 className="sr-only">Entrar no EduTrack</h1>
-          <p className="suave">Protótipo com dados fictícios. Escolha um perfil para entrar.</p>
+          <p className="suave">Escolha seu perfil para entrar.</p>
           <ul className="perfis">
             {Object.entries(PERFIS).map(([k, p]) => (
               <li key={k}>
-                <button type="button" onClick={() => { setPerfil(k); setEmail(p.exemplo); setSenha(''); setErro(''); }}>
-                  <span><b>{p.titulo}</b><small>{p.exemplo}</small></span>
+                <button type="button" onClick={() => { setPerfil(k); setEmail(''); setSenha(''); setErro(''); }}>
+                  <span><b>{p.titulo}</b><small>{p.desc}</small></span>
                   <span aria-hidden="true">›</span>
                 </button>
               </li>
@@ -40,7 +40,7 @@ export default function Entrar() {
           <button type="button" className="btn vazio pequeno" onClick={() => setPerfil(null)}>Trocar perfil</button>
           <h1>Entrar como {PERFIS[perfil].curto.toLowerCase()}</h1>
           <Campo id="email" rotulo="E-mail" type="email" autoComplete="username" value={email} onChange={(e) => setEmail(e.target.value)} />
-          <Campo id="senha" rotulo="Senha" type="password" autoComplete="current-password" value={senha} onChange={(e) => setSenha(e.target.value)} erro={erro} dica="Nos dados de exemplo, a senha é 123456." />
+          <Campo id="senha" rotulo="Senha" type="password" autoComplete="current-password" value={senha} onChange={(e) => setSenha(e.target.value)} erro={erro} />
           <button className="btn" type="submit">Entrar</button>
           <p className="suave">Não tem conta? <Link to="/cadastro">Cadastre-se</Link></p>
         </form>

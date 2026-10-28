@@ -37,6 +37,7 @@ a{color:var(--roxo2)}
 .menu .logo{padding:4px 12px}
 .perfil{font-size:13px;color:var(--suave);padding:0 12px 6px}
 .menu nav{display:flex;flex-direction:column;gap:4px}
+.icone{flex:none}
 .menu nav a{display:flex;gap:10px;align-items:center;padding:10px 12px;border-radius:8px;text-decoration:none;color:var(--suave);min-height:44px}
 .menu nav a:hover{background:#f3f0ff}
 .menu nav a.ativo{background:var(--bg);color:var(--tinta);font-weight:700}
@@ -56,7 +57,7 @@ main:focus{outline:none}
 .kpi strong{font-size:30px;line-height:1.1}
 .kpi small{font-size:12px;font-weight:600}
 .duas{display:grid;grid-template-columns:1fr 1fr;gap:16px;align-items:start}
-.banner{border-radius:16px;padding:20px 22px;color:#fff;background:linear-gradient(90deg,#5b21b6,#7c3aed)}
+.banner{border-radius:16px;padding:20px 22px;color:#fff;background:#5b21b6}
 .banner h2{font-size:20px;margin:0 0 4px}
 
 /* alerta */

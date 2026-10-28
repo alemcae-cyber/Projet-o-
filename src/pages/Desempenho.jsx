@@ -5,7 +5,6 @@ import { Campo, Segmentos } from '../ui.jsx';
 import Visao from './Visao.jsx';
 import { ALUNOS, ESCOLAS, TURMAS, alunoPorId, escolaPorId, freqMedia, turmaPorId } from '../data.js';
 
-// Tela do ALUNO e do RESPONSÁVEL: individual, da turma e da rede toda (sempre dados agregados, sem nomes de colegas).
 export default function Desempenho() {
   const { user } = useAuth();
   const filhos = (user.alunoIds || []).map(alunoPorId).filter(Boolean);

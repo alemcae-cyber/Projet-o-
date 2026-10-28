@@ -3,7 +3,6 @@ import { useAuth } from '../auth.jsx';
 import { Barra, Card, Kpi, LineChart } from '../ui.jsx';
 import { ALUNOS, BIM, ESCOLAS, TURMAS, alertas, escolaPorId, freqAtual, freqMedia, notaMedia, serie, turmaPorId } from '../data.js';
 
-// Coordenação (uma escola) e Secretaria (rede toda).
 export default function Painel() {
   const { user } = useAuth();
   const rede = user.perfil === 'secretaria';
@@ -21,7 +20,7 @@ export default function Painel() {
       <h1>Painel</h1>
       <div className="banner">
         <h2>{rede ? 'Olá, Secretaria' : 'Olá, Coordenação'}</h2>
-        <p>Acompanhe frequência e desempenho {rede ? 'da rede' : 'da escola'}. Dados fictícios.</p>
+        <p>Acompanhe frequência e desempenho {rede ? 'da rede' : 'da escola'}.</p>
       </div>
       <div className="kpis">
         <Kpi rotulo="Estudantes" valor={lista.length} />

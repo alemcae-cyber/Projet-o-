@@ -139,7 +139,7 @@ export default function Cadastro() {
             <Campo id="matricula" rotulo={f.perfil === 'aluno' ? 'Sua matrícula' : 'Matrícula do aluno'} placeholder="2026-0001" value={f.matricula} erro={e.matricula} dica="O número está no boletim ou na carteirinha." onChange={(x) => set('matricula', x.target.value)} />
             {aluno && !e.matricula && (
               <p className="achou" aria-live="polite">
-                ✓ Matrícula encontrada: {mascararNome(aluno.nome)} · turma {turmaPorId(aluno.turmaId).nome} · {escolaPorId(turmaPorId(aluno.turmaId).escolaId).nome}
+                Matrícula encontrada: {mascararNome(aluno.nome)} · turma {turmaPorId(aluno.turmaId).nome} · {escolaPorId(turmaPorId(aluno.turmaId).escolaId).nome}
               </p>
             )}
             {f.perfil === 'responsavel' && (

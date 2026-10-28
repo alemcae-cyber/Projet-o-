@@ -42,7 +42,7 @@ export default function Alunos() {
                   <strong className={freqAtual(a) < 75 ? 'ruim' : ''}>{freqAtual(a)}%</strong>
                   <small>Média {mediaAluno(a).toFixed(1)}</small>
                 </span>
-                <span className={`selo ${em ? 'ruim' : 'ok'}`}>{em ? '⚠ Em atenção' : '✓ Em dia'}</span>
+                <span className={`selo ${em ? 'ruim' : 'ok'}`}>{em ? 'Em atenção' : 'Em dia'}</span>
               </Link>
             </li>
           );

@@ -1,6 +1,6 @@
 import { NavLink, Outlet } from 'react-router-dom';
 import { useAuth } from './auth.jsx';
-import { Logo } from './ui.jsx';
+import { Icone, Logo } from './ui.jsx';
 import { NAV, PERFIS } from './data.js';
 
 export default function Layout() {
@@ -15,7 +15,7 @@ export default function Layout() {
         <Logo />
         <p className="perfil">Perfil: {perfil}</p>
         <nav aria-label="Principal">
-          {itens.map(([to, ic, txt]) => <NavLink key={to} to={to} className={cls}><span aria-hidden="true">{ic}</span>{txt}</NavLink>)}
+          {itens.map(([to, ic, txt]) => <NavLink key={to} to={to} className={cls}><Icone nome={ic} />{txt}</NavLink>)}
         </nav>
         <button type="button" className="sair" onClick={sair}>Sair</button>
       </aside>
@@ -26,7 +26,7 @@ export default function Layout() {
       </header>
       <main id="conteudo" tabIndex={-1}><Outlet /></main>
       <nav className="abas" aria-label="Principal no celular">
-        {itens.map(([to, ic, , curto]) => <NavLink key={to} to={to} className={cls}><span aria-hidden="true">{ic}</span>{curto}</NavLink>)}
+        {itens.map(([to, ic, , curto]) => <NavLink key={to} to={to} className={cls}><Icone nome={ic} />{curto}</NavLink>)}
       </nav>
     </div>
   );

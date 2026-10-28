@@ -1,8 +1,6 @@
 import { Alerta, Barra, Card, Kpi, LineChart } from '../ui.jsx';
 import { ALUNOS, BIM, alertas, freqMedia, notaMedia, porDisciplina, serie, textoAlerta } from '../data.js';
 
-// Bloco de desempenho reutilizado por aluno, responsável, professor e coordenação.
-// lista = alunos do recorte (1 aluno, uma turma, uma escola ou a rede toda).
 export default function Visao({ lista, individual, turmaLista, ranking, rankingTitulo, acao }) {
   const s = serie(lista);
   const fm = freqMedia(lista), nm = notaMedia(lista);
